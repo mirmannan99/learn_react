@@ -1,10 +1,10 @@
-type Props = {}
+type MessageProps = { title: number; message: string }
 
-export default function Message({}: Props) {
+export default function Message({ title, message }: MessageProps) {
   return (
     <div>
-      <h2>Welcome to the website</h2>
-      <p>Thank you for registering</p>
+      <h2>{title}</h2>
+      <p>{message}</p>
     </div>
   )
 }
