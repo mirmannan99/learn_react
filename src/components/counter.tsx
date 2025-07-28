@@ -15,7 +15,7 @@ export default function Counter({}: Props) {
   };
 
   const decrement = () => {
-    setCounter((prev) => prev-1);
+    setCounter((prev) => prev - 1);
     if (counter <= 1) {
       setdecEnabled(true);
     }
