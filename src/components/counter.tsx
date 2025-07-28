@@ -1,27 +1,25 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-type Props = {}
+type Props = {};
 
 export default function Counter({}: Props) {
-  const [counter, setCounter] = useState<number>(0)
-  const [incEnabled, setIncEnabled] = useState<boolean>(false)
-  const [decEnabled, setdecEnabled] = useState<boolean>(false)
+  const [counter, setCounter] = useState<number>(0);
+  const [incEnabled, setIncEnabled] = useState<boolean>(false);
+  const [decEnabled, setdecEnabled] = useState<boolean>(false);
 
   const increment = () => {
-    if (counter > 9) {
-      setIncEnabled(prev => !prev)
-    } else {
-      setCounter(prev => ++prev)
+    setCounter((prev) => ++prev);
+    if (counter >= 9) {
+      setIncEnabled(true);
     }
-  }
+  };
 
   const decrement = () => {
-    if (counter < 1) {
-      setdecEnabled(prev => !prev)
-    } else {
-      setCounter(prev => --prev)
+    setCounter((prev) => prev-1);
+    if (counter <= 1) {
+      setdecEnabled(true);
     }
-  }
+  };
 
   // place to hold the counting value
   // create a button which will increase the value of this place holder
@@ -40,5 +38,5 @@ export default function Counter({}: Props) {
         increment
       </button>
     </>
-  )
+  );
 }
