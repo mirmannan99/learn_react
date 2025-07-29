@@ -6,7 +6,7 @@ export default function LightBulb() {
 
   const [currentImage, setCurrentImage] = useState("/images/light-off.png");
   const [currentButtonText, setButtonText] = useState("Light on");
-  const[currentButtonColor,setButtonColor]=useState("red");
+  const [currentButtonColor, setButtonColor] = useState("red");
 
   const changeImage = () => {
     setCurrentImage((prev) =>
@@ -16,8 +16,8 @@ export default function LightBulb() {
     );
   };
   const changeText = () => {
-    setButtonText((prev) => prev === "Light on" ? "Light off" : "Light on");
-    setButtonColor((prev)=> prev==="red"?"green":"red" )
+    setButtonText((prev) => (prev === "Light on" ? "Light off" : "Light on"));
+    setButtonColor((prev) => (prev === "red" ? "green" : "red"));
   };
 
   return (
@@ -25,13 +25,12 @@ export default function LightBulb() {
       {/* {" "} */}
       <img src={currentImage} width="100px" alt="" />
       <br />
-      <button style={{backgroundColor:currentButtonColor}}
+      <button
+        style={{ backgroundColor: currentButtonColor }}
         onClick={() => {
           changeImage();
           changeText();
-
         }}
-
       >
         {currentButtonText}
       </button>
