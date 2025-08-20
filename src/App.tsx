@@ -1,12 +1,12 @@
 import './App.css'
-import Counter from './components/counter'
-import LightBulb from './components/light-bulb'
+import ApiTest from './components/ApiTest'
 
 export function App() {
   return (
     <>
-      <Counter />
-      <LightBulb/>
+      {/* <Counter /> */}
+      {/* <LightBulb/> */}
+      <ApiTest />
     </>
   )
 }
